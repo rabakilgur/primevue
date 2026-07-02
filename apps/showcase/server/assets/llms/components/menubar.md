@@ -14,7 +14,7 @@ Screen Reader Menubar component uses the menubar role and the value to describe 
 
 ## Advanced
 
-Menubar is a simple horizontal navigation component, for advanced use cases consider Marketing and Application NavBars in PrimeBlocks or templates with horizontal menus in application templates.
+Menubar is a simple horizontal navigation component. For advanced navigation patterns, see the official PrimeVue documentation .
 
 ## Basic
 

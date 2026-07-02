@@ -83,7 +83,6 @@ export default defineNuxtConfig({
     routeRules: {
         '/accessibility': { redirect: { to: '/guides/accessibility', statusCode: 301 } },
         '/installation': { redirect: { to: '/vite', statusCode: 301 } },
-        '/uikit/guide': { redirect: { to: '/uikit/guide/v3', statusCode: 301 } },
         ...markdownRedirects
     },
     primevue: {
@@ -100,20 +99,19 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 class: 'p-dark'
             },
-            title: 'PrimeVue - Vue UI Component Library',
+            title: 'PrimeVue Docs (Unofficial Mirror)',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
-                { name: 'robots', content: 'index,follow' },
+                { name: 'description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
+                { name: 'robots', content: 'noindex, nofollow' },
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:site', content: '@primevue' },
-                { name: 'twitter:title', content: 'PrimeVue | Vue UI Component Library' },
-                { name: 'twitter:description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
+                { name: 'twitter:title', content: 'PrimeVue Docs (Unofficial Mirror)' },
+                { name: 'twitter:description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
                 { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'PrimeVue | Vue UI Component Library' },
-                { property: 'og:url', content: 'https://primevue.org/' },
-                { property: 'og:description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
+                { property: 'og:title', content: 'PrimeVue Docs (Unofficial Mirror)' },
+                { property: 'og:url', content: 'https://pv4.uhl.sh/' },
+                { property: 'og:description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
                 { property: 'og:image', content: 'https://www.primefaces.org/static/social/primevue-preview.jpg' },
                 { property: 'og:ttl', content: '604800' }
             ],

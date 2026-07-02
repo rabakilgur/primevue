@@ -143,6 +143,7 @@
 
 <script>
 import EventBus from '@/app/AppEventBus';
+import { DISCLAIMER_FULL } from '@/constants/disclaimer';
 import docsearch from '@docsearch/js';
 
 export default {
@@ -166,8 +167,7 @@ export default {
                     url: 'https://v3.primevue.org'
                 }
             ],
-            disclaimerTooltip:
-                'This is an unofficial documentation mirror, maintained for internal reference purposes. It is based on the open-source PrimeVue 4.x codebase and documentation, made available by PrimeTek Informatics under the MIT License. This site is not affiliated with, endorsed by, or sponsored by PrimeTek Informatics in any way. "PrimeVue," "PrimeFaces," "PrimeReact," "PrimeNG," and associated logos are trademarks of PrimeTek Informatics, and no rights to those trademarks are claimed or implied here. Content has been reproduced and/or adapted from the original PrimeVue documentation in accordance with the terms of the MIT License; the original copyright notice and license text are preserved accordingly. For the official, up-to-date documentation and support, please visit primevue.org.'
+            disclaimerTooltip: DISCLAIMER_FULL
         };
     },
     scrollListener: null,
@@ -181,17 +181,13 @@ export default {
             indexName: 'primevue',
             apiKey: '9bb5939e36897b26ff7de5b7b64d6c43',
             transformItems: (items) => {
-                const isLocalhost = process.env.NODE_ENV !== 'production';
-
                 return items.map((item) => {
-                    if (isLocalhost) {
-                        const url = new URL(item.url);
+                    const url = new URL(item.url);
 
-                        url.protocol = window.location.protocol;
-                        url.hostname = window.location.hostname;
-                        url.port = window.location.port;
-                        item.url = url.toString();
-                    }
+                    url.protocol = window.location.protocol;
+                    url.hostname = window.location.hostname;
+                    url.port = window.location.port;
+                    item.url = url.toString();
 
                     return item;
                 });

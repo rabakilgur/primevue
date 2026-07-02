@@ -4,7 +4,7 @@ Welcome to the PrimeVue Contribution Guide and thank you for considering contrib
 
 ## Benefits
 
-Contributing to PrimeVue comes with several benefits. Being part of an open-source project will enhance your career and open up exciting opportunities. Contributors and Committers will be listed on our team page . You'll gain significant visibility in the developer community while improving yourself as a professional. You'll be invited to a private communication channel at Discord to get in touch with PrimeTek. In addition, contributors have access to all PrimeVue add-ons like Premium Templates, Blocks, and UI Kit free of charge.
+Contributing to PrimeVue comes with several benefits. Being part of an open-source project will enhance your career and open up exciting opportunities. Contributors and Committers will be listed on the team page at the official site. You'll gain significant visibility in the developer community while improving yourself as a professional. You'll be invited to a private communication channel at Discord to get in touch with PrimeTek. In addition, contributors have access to all PrimeVue add-ons like Premium Templates, Blocks, and UI Kit free of charge.
 
 ## CLA
 

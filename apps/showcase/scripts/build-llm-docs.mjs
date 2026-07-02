@@ -2,6 +2,7 @@ import ComponentTokens from '@primeuix/themes/tokens';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { DISCLAIMER_FULL, DOCS_BASE_URL } from '../constants/disclaimer.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -753,6 +754,7 @@ function generateJsonOutput(components, apiDocs, guidePages = []) {
 function generateMarkdownOutput(components, apiDocs, guidePages = []) {
     let markdown = '# PrimeVue Documentation\n\n';
 
+    markdown += `${DISCLAIMER_FULL}\n\n`;
     markdown += `Generated: ${new Date().toISOString().split('T')[0]}\n\n`;
     markdown += '---\n\n';
 
@@ -931,9 +933,7 @@ const GUIDE_PAGES = [
     'laravel',
     'nuxt',
     'vite',
-    'designer',
     'tailwind',
-    'uikit',
     'contribution',
     'setup',
     'llms',
@@ -1185,6 +1185,8 @@ function generateGuideMarkdownFiles(pages) {
 function generateLlmsTxtWithGuides(components, guidePages) {
     let content = '# PrimeVue\n\n';
 
+    content += `${DISCLAIMER_FULL}\n\n`;
+
     // Guides section
     content += '## Guides\n\n';
 
@@ -1193,9 +1195,9 @@ function generateLlmsTxtWithGuides(components, guidePages) {
         const urlPath = page.fullPath || page.name;
 
         if (page.description) {
-            content += `- [${page.title}](https://primevue.org/${urlPath}): ${page.description}\n`;
+            content += `- [${page.title}](${DOCS_BASE_URL}/${urlPath}): ${page.description}\n`;
         } else {
-            content += `- [${page.title}](https://primevue.org/${urlPath})\n`;
+            content += `- [${page.title}](${DOCS_BASE_URL}/${urlPath})\n`;
         }
     }
 
@@ -1206,7 +1208,7 @@ function generateLlmsTxtWithGuides(components, guidePages) {
     const sorted = [...components].sort((a, b) => a.title.localeCompare(b.title));
 
     for (const comp of sorted) {
-        content += `- [${comp.title}](https://primevue.org/${comp.name}): ${comp.description}\n`;
+        content += `- [${comp.title}](${DOCS_BASE_URL}/${comp.name}): ${comp.description}\n`;
     }
 
     const outputPath = path.join(OUTPUT_DIR, 'llms.txt');

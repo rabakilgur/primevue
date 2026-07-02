@@ -579,90 +579,9 @@
             ]
         },
         {
-            "name": "Volt UI",
-            "icon": "pi pi-bolt",
-            "href": "https://volt.primevue.org"
-        },
-        {
-            "name": "Figma UI Kit",
-            "icon": "pi pi-pencil",
-            "children": [
-                {
-                    "name": "Overview",
-                    "to": "/uikit"
-                },
-                {
-                    "name": "Guide v4",
-                    "to": "/uikit/guide/v4"
-                },
-                {
-                    "name": "Guide v3",
-                    "to": "/uikit/guide/v3"
-                }
-            ]
-        },
-        {
-            "name": "Theme Designer",
-            "icon": "pi pi-sparkles",
-            "children": [
-                {
-                    "name": "Overview",
-                    "to": "/designer"
-                },
-                {
-                    "name": "Guide",
-                    "to": "/designer/guide"
-                },
-                {
-                    "name": "Figma Plugin",
-                    "href": "https://www.figma.com/community/plugin/1592914021886732603"
-                },
-                {
-                    "name": "CI Pipeline",
-                    "to": "/designer/ci"
-                }
-            ]
-        },
-        {
-            "name": "Templates",
-            "icon": "pi pi-heart",
-            "to": "/templates"
-        },
-        {
-            "name": "PrimeBlocks",
-            "icon": "pi pi-server",
-            "href": "https://primeblocks.org"
-        },
-        {
-            "name": "Support",
-            "icon": "pi pi-question",
-            "children": [
-                {
-                    "name": "Discord",
-                    "href": "https://discord.gg/gzKFYnpmCY"
-                },
-                {
-                    "name": "Forum",
-                    "href": "https://github.com/orgs/primefaces/discussions"
-                },
-                {
-                    "name": "PRO Support",
-                    "to": "/support"
-                }
-            ]
-        },
-        {
             "name": "Discover",
             "icon": "pi pi-search",
             "children": [
-                {
-                    "name": "About Us",
-                    "to": "/team"
-                },
-                {
-                    "name": "Roadmap",
-                    "to": "/roadmap"
-                },
                 {
                     "name": "Source Code",
                     "href": "https://github.com/primefaces/primevue"
@@ -679,14 +598,6 @@
                 {
                     "name": "Twitter",
                     "href": "https://twitter.com/primevue"
-                },
-                {
-                    "name": "Newsletter",
-                    "href": "https://www.primefaces.org/newsletter"
-                },
-                {
-                    "name": "PrimeGear",
-                    "href": "https://gear.primefaces.org"
                 }
             ]
         }

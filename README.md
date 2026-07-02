@@ -3,6 +3,8 @@
 
 [![PrimeVue Hero](https://www.primefaces.org/static/social/primevue-preview.jpg)](https://primevue.org/)
 
+Official, up-to-date documentation: [primevue.org](https://primevue.org)
+
 # PrimeVue MonoRepo
 
 PrimeVue is a rich set of open source UI Components for Vue. See [PrimeVue homepage](https://primevue.org/) for live showcase and documentation.

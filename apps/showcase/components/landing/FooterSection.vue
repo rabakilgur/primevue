@@ -17,15 +17,12 @@
                 </div>
                 <div class="w-6/12 lg:w-3/12 flex">
                     <ul class="list-none p-0 m-0">
-                        <li class="font-bold mb-8">Support</li>
+                        <li class="font-bold mb-8">Community</li>
                         <li class="mb-6">
                             <a href="https://github.com/orgs/primefaces/discussions" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Forum</a>
                         </li>
                         <li class="mb-6">
                             <a href="https://discord.gg/gzKFYnpmCY" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Discord</a>
-                        </li>
-                        <li class="mb-6">
-                            <PrimeVueNuxtLink to="/support" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">PRO Support</PrimeVueNuxtLink>
                         </li>
                     </ul>
                 </div>
@@ -44,33 +41,17 @@
                     <ul class="list-none p-0 m-0">
                         <li class="font-bold mt-8 lg:mt-0 mb-8">Resources</li>
                         <li class="mb-6">
-                            <a href="https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer"
-                                >PrimeTV</a
-                            >
-                        </li>
-                        <li class="mb-6">
-                            <a href="https://primeui.store" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Store</a>
-                        </li>
-                        <li class="mb-6">
                             <a href="https://github.com/primefaces/primevue" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </li>
-                        <li class="mb-6">
-                            <a href="https://twitter.com/primevue" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Twitter</a>
-                        </li>
-                        <li class="mb-6">
-                            <a href="https://www.primefaces.org/newsletter" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Newsletter</a>
-                        </li>
-                        <li class="mb-6">
-                            <a href="https://gear.primefaces.org/" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">PrimeGear</a>
-                        </li>
-                        <li class="mb-6">
-                            <a href="mailto:contact@primetek.com.tr" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Contact Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <hr class="section-divider" />
+
+            <p class="text-sm text-surface-500 dark:text-surface-400 text-center mb-8">
+                <strong>Disclaimer:</strong> {{ disclaimerFull }}
+            </p>
 
             <div class="flex flex-wrap justify-between py-12 gap-8">
                 <span>
@@ -118,9 +99,6 @@
                     </svg>
                 </span>
                 <div class="flex items-center gap-2">
-                    <a href="https://twitter.com/primevue" class="linkbox linkbox-icon">
-                        <i class="pi pi-twitter"></i>
-                    </a>
                     <a href="https://github.com/primefaces/primevue" class="linkbox linkbox-icon">
                         <i class="pi pi-github"></i>
                     </a>
@@ -137,5 +115,13 @@
 </template>
 
 <script>
-export default {};
+import { DISCLAIMER_FULL } from '@/constants/disclaimer';
+
+export default {
+    data() {
+        return {
+            disclaimerFull: DISCLAIMER_FULL
+        };
+    }
+};
 </script>

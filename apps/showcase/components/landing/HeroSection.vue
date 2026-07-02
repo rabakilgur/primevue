@@ -261,20 +261,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div v-if="selectedSidebarOption === 'Opportunities'" class="grid grid-cols-2 gap-6 p-6">
-                            <div v-for="(data, i) of opportunities" :key="i" class="flex flex-col p-3 rounded-xl bg-emphasis">
-                                <div class="flex items-start justify-between gap-2">
-                                    <div class="font-medium text-color mt-0.5">{{ data.title }}</div>
-                                    <NuxtLink :to="data.link" target="_blank" rel="noopener">
-                                        <Button icon="pi pi-arrow-up-right text-sm !leading-none" class="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900" severity="secondary" text />
-                                    </NuxtLink>
-                                </div>
-                                <img class="block w-full mt-2 rounded-lg" :src="data.image" alt="Opportunutiy Image" />
-                                <div class="flex-1 p-2 mt-2 text-xs rounded-lg bg-surface-0 dark:bg-surface-900 text-color">
-                                    {{ data.text }}
-                                </div>
-                            </div>
-                        </div>
                         <div v-if="selectedSidebarOption === 'Statistics'" class="h-[calc(100%-160px)] p-6">
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="flex flex-col w-full h-full p-3 rounded-xl bg-emphasis">
@@ -358,7 +344,7 @@ export default {
             selectedSampleOption: { icon: 'pi pi-home', title: 'Overview', src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/overview' },
             visibleRight: false,
             selectedSidebarOption: 'Statistics',
-            sidebarOptions: ['Interaction Logs', 'Preferences', 'Statistics', 'Opportunities'],
+            sidebarOptions: ['Interaction Logs', 'Preferences', 'Statistics'],
             callLogs: [
                 { image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar6.png', name: 'Brook Simmons', time: '02.02.2024 | 45 min' },
                 { image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg', name: 'Jacob Jones', time: '02.02.2024 | 45 min' },
@@ -441,44 +427,6 @@ export default {
                         { icon: 'pi pi-box', title: 'Share Data with 3rd Parties', checked: true },
                         { icon: 'pi pi-file', title: 'Cookies', checked: false }
                     ]
-                }
-            ],
-            opportunities: [
-                {
-                    title: 'Apollo',
-                    link: 'https://primevue.org/templates/apollo/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/apollo-vue.jpg',
-                    text: 'Keep your application fresh with Apollo, the newest and most modern template available.'
-                },
-                {
-                    title: 'Ultima',
-                    link: 'https://primevue.org/templates/ultima/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/ultima-vue.jpg',
-                    text: "Elevate your application's intuitiveness with Ultima's premium Material Design interface."
-                },
-                {
-                    title: 'Diamond',
-                    link: 'https://primevue.org/templates/diamond/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/diamond-remastered-vue.jpg',
-                    text: "Handle complex operations with elegance with Diamond's robust and powerful premium design."
-                },
-                {
-                    title: 'Atlantis',
-                    link: 'https://primevue.org/templates/atlantis/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/atlantis-vue.jpg',
-                    text: "Boost your application's capabilities, customization with the Atlantis template."
-                },
-                {
-                    title: 'Verona',
-                    link: 'https://primevue.org/templates/verona/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/verona-vue.jpg',
-                    text: "Achieve sophistication and subtlety with Verona's minimalistic, content-focused design."
-                },
-                {
-                    title: 'Freya',
-                    link: 'https://primevue.org/templates/freya/',
-                    image: 'https://primefaces.org/cdn/primevue/images/layouts/freya-vue.png',
-                    text: "Give your application a sleek, updated look with Freya's chic and modern premium template."
                 }
             ],
             customerSatisfaction: 56,
