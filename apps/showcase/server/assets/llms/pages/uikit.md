@@ -6,18 +6,6 @@ Design files for PrimeVue Components.
 
 PrimeOne uses PrimeIcons, the official icon library by PrimeTek. To use it effectively within your design system, you need to add PrimeIcons to your Figma environment by following these steps: Open the PrimeIcons file in Figma and move it to your team project. Publish the PrimeIcons file and enable it for all team files in your Team Settings. Return to your PrimeOne file. In the Libraries panel, click on the banner that says “Includes X missing libraries.” From the dropdown, select “ PrimeIcons (Community) ” and click the Swap Library button.
 
-## Overview
-
-PrimeOne is the official Figma library of UI components designed to match the implementations in the Prime UI Suites. The current iteration of PrimeOne is structured around the Aura Light and Aura Dark themes.
-
-## Support
-
-The community gathers on GitHub Discussions and Discord to ask questions, share ideas, and discuss the technology. For direct inquiries or suggestions, feel free to contact us at contact@primetek.com.tr .
-
-## Update Prime One
-
-When a new version of PrimeOne is released, follow the steps below to update your files: Download the latest version of PrimeOne from PrimeStore. Unzip the file and upload it to your Figma workspace. Publish the newly uploaded file as a library. In all consumer files, use Swap Library to point to the new version. Once the transition is complete, you can safely unpublish the old PrimeOne library Before each update, it's a good idea to review the Changelog on the Get Started page of the PrimeOne Figma file. Keep in mind that while Swap Library will update most components, any customized components may require manual review and adjustment.
-
 ## Licence
 
 Will purchasing a PrimeBlocks license include access to PrimeOne components? No. The PrimeBlocks license does not grant access to the PrimeOne UI Kit. They are separate products with individual licenses.
@@ -38,13 +26,17 @@ Download the latest .fig UI Kit - From your PrimeStore panel, download the lates
 
 To make PrimeOne available as a shared library: Open the imported PrimeOne .fig file. Go to Assets Manage Libraries Click "Publish..." to share PrimeOne with your team, then confirm by clicking the "Publish" button in the modal.
 
-## Resources
+## Overview
 
-PrimeOne for Figma takes full advantage of powerful Figma features such as components, variants, auto layout, styles, interactivity, and design tokens via Tokens Studio. If you're new to Figma or want to get the most out of PrimeOne, we recommend exploring the following resources: Tokens Studio Documentation - PrimeOne uses Tokens Studio for design token management. Visit the official docs to understand how it works and how to use it effectively. Figma's Best Practice Guides - Learn how to work efficiently with components, variants, and layouts. Figma's Official YouTube Channel - Tutorials and feature walkthroughs from the Figma team. Figmalion Newsletter - Stay updated with curated insights from the Figma community.
+PrimeOne is the official Figma library of UI components designed to match the implementations in the Prime UI Suites. The current iteration of PrimeOne is structured around the Aura Light and Aura Dark themes.
 
-## Token Sets
+## Support
 
-Primitive This set contains the most foundational tokens, such as base colors and border radius, elements that are considered “primitive” by nature. Semantic Includes essential system-wide tokens like primary, surface, and other shared design values It also defines tokens used across multiple component groups. For example, tokens under {form.field.\*} are referenced by component-level tokens in InputText, MultiSelect, Checkbox, and other form components, enabling consistent styling across the board. Component These tokens are defined specifically for each component to allow deep customization While we've aimed to create dedicated tokens for every component state, many of them still reference the semantic or primitive tokens, allowing you to make global updates from a single place when needed. App Tokens in this set are not part of the PrimeUIX system. They are intended for values defined in your own application. The same applies to tokens used in our UI library showcases. For example, there is no dedicated font size token in PrimeUIX because font styles are not part of the design system. UI components inherit their font settings from the application. Custom If you're using the Figma to Theme feature and want your newly created custom tokens to appear in your Theme Designer themes, place them in this set. Even if you're not using the Theme Designer, we still recommend creating a separate set — or using the existing “Custom” set — for your own tokens. Making changes to the default sets, especially deleting tokens or altering reference values, can lead to inconsistencies with the library tokens and cause additional work during development.
+The community gathers on GitHub Discussions and Discord to ask questions, share ideas, and discuss the technology. For direct inquiries or suggestions, feel free to contact us at contact@primetek.com.tr .
+
+## Update Prime One
+
+When a new version of PrimeOne is released, follow the steps below to update your files: Download the latest version of PrimeOne from PrimeStore. Unzip the file and upload it to your Figma workspace. Publish the newly uploaded file as a library. In all consumer files, use Swap Library to point to the new version. Once the transition is complete, you can safely unpublish the old PrimeOne library Before each update, it's a good idea to review the Changelog on the Get Started page of the PrimeOne Figma file. Keep in mind that while Swap Library will update most components, any customized components may require manual review and adjustment.
 
 ## Components
 
@@ -62,6 +54,14 @@ Will there be a completely new Figma file with each update, or will the current 
 
 What should we do after purchasing? I can't publish the Preview file? The Preview file is view-only , so it can't be published. To use the library, download the .fig file from PrimeStore and import it into your Figma workspace. Once imported, you'll be able to open the file and publish it as a library for use in your projects. How to change theme? After exporting your tokens as Figma Variables using the Themes option in Tokens Studio, theme switching must be handled using Figma's native Mode Switching feature. The Theme Switcher within the Tokens Studio plugin will no longer function once themes are bound to a Variable Collection — this applies to PrimeOne as well. Therefore, to switch between Light and Dark modes, you should always use Figma's built-in Mode Switching interface.
 
+## Resources
+
+PrimeOne for Figma takes full advantage of powerful Figma features such as components, variants, auto layout, styles, interactivity, and design tokens via Tokens Studio. If you're new to Figma or want to get the most out of PrimeOne, we recommend exploring the following resources: Tokens Studio Documentation - PrimeOne uses Tokens Studio for design token management. Visit the official docs to understand how it works and how to use it effectively. Figma's Best Practice Guides - Learn how to work efficiently with components, variants, and layouts. Figma's Official YouTube Channel - Tutorials and feature walkthroughs from the Figma team. Figmalion Newsletter - Stay updated with curated insights from the Figma community.
+
+## Token Sets
+
+Primitive This set contains the most foundational tokens, such as base colors and border radius, elements that are considered “primitive” by nature. Semantic Includes essential system-wide tokens like primary, surface, and other shared design values It also defines tokens used across multiple component groups. For example, tokens under {form.field.*} are referenced by component-level tokens in InputText, MultiSelect, Checkbox, and other form components, enabling consistent styling across the board. Component These tokens are defined specifically for each component to allow deep customization While we've aimed to create dedicated tokens for every component state, many of them still reference the semantic or primitive tokens, allowing you to make global updates from a single place when needed. App Tokens in this set are not part of the PrimeUIX system. They are intended for values defined in your own application. The same applies to tokens used in our UI library showcases. For example, there is no dedicated font size token in PrimeUIX because font styles are not part of the design system. UI components inherit their font settings from the application. Custom If you're using the Figma to Theme feature and want your newly created custom tokens to appear in your Theme Designer themes, place them in this set. Even if you're not using the Theme Designer, we still recommend creating a separate set — or using the existing “Custom” set — for your own tokens. Making changes to the default sets, especially deleting tokens or altering reference values, can lead to inconsistencies with the library tokens and cause additional work during development.
+
 ## C I Pipeline
 
 Theme Designer offers an API that can be utilized to implement continuos integration pipelines to automate figma to theme code generation whenever you push updates to the repository from Figma. Visit the CI Pipeline documentation for comprehensive information.
@@ -77,6 +77,18 @@ Set sync provider via Tokens Studio - Figma plugins are limited to sharing a max
 ## Collections
 
 Primitive This collection contains the most foundational variables, such as base colors and border radius, elements that are considered “primitive” by nature. Semantic Common & Semantic Color Scheme Includes essential system-wide variables like primary, surface, and other shared design values It also defines variables used across multiple component groups. For example, variables under form/field are referenced by component-level variables in InputText, MultiSelect, Checkbox, and other form components, enabling consistent styling across the board. Component Common & Component Color Scheme These variables are defined specifically for each component to allow deep customization. While we've aimed to create dedicated variables for every component state, many of them still reference the semantic or primitive variables, allowing you to make global updates from a single place when needed. App Variables in this collection are not part of the PrimeUIX system. They are intended for values defined in your own application. The same applies to variables used in our UI library showcases. For example, there is no dedicated font size variable in PrimeUIX because font styles are not part of the design system. UI components inherit their font settings from the application. Custom If you're using the Figma to Theme feature and want your newly created custom variables to appear in your Theme Designer themes, place them in this collection. Even if you're not using the Theme Designer, we still recommend creating a separate collection — or using the existing “Custom” collection — for your own variables. Making changes to the default collections, especially deleting variables or altering reference values, can lead to inconsistencies with the library variables and cause additional work during development.
+
+## Components
+
+How to change base font size? The base font size used in PrimeOne is 14px. Similar to how rem works in CSS, this is controlled by the scale/* variables located under the "Primitive" collection in Variables. When you change the values of these variables, all size calculations will adjust accordingly. Note that not all variables in the library may be linked to scale/* variables. So it's essential to check components individually.
+
+## Updates
+
+Will there be a completely new Figma file with each update, or will the current PrimeOne file be modified and versioned? Each update will come as a new Figma file—an updated version of the previous one. You can seamlessly transition to the new version in your consumer files using Figma's Swap Library feature. Will the PrimeOne UI Kit stay in sync with ongoing updates to the Prime UI Libraries? The PrimeOne UI Kit does not update in real time alongside the libraries. However, we regularly release updates to bridge the gap and ensure alignment with key changes. How will users receive new components when they're added? New components will be included in future updates to the UI Kit. Please note that these updates may not coincide immediately with library changes and may take some time to roll out. How frequently is the PrimeOne UI Kit updated? We don't follow a fixed release schedule. Updates are made as needed, based on significant changes or additions to the Prime UI libraries.
+
+## Usage
+
+What should we do after purchasing? I can't publish the Preview file? The Preview file is view-only , so it can't be published. To use the library, download the .fig file from PrimeStore and import it into your Figma workspace. Once imported, you'll be able to open the file and publish it as a library for use in your projects. How to change theme? To enable theme switching in PrimeOne, you need to set up the Variable modes. Select the layers you want to switch between Light or Dark. Then, under Appearance, use the Apply variable modes icon to assign both the Semantic and Component modes to the target theme.
 
 ## Important Notice
 
@@ -94,14 +106,3 @@ PrimeUI Theme Generator Figma plugin is the official tool developed by PrimeTek 
 
 PrimeOne for Figma takes full advantage of powerful Figma features such as components, variants, auto layout, styles, prototypes, and variables. If you're new to Figma or want to get the most out of PrimeOne, we recommend exploring the following resources: Variables - PrimeOne uses Figma Variables for design token management. Visit the official docs to understand how it works and how to use it effectively. Figma's Best Practice Guides - Learn how to work efficiently with components, variants, and layouts. Figma's Official YouTube Channel - Tutorials and feature walkthroughs from the Figma team. Figmalion Newsletter - Stay updated with curated insights from the Figma community.
 
-## Components
-
-How to change base font size? The base font size used in PrimeOne is 14px. Similar to how rem works in CSS, this is controlled by the scale/_ variables located under the "Primitive" collection in Variables. When you change the values of these variables, all size calculations will adjust accordingly. Note that not all variables in the library may be linked to scale/_ variables. So it's essential to check components individually.
-
-## Updates
-
-Will there be a completely new Figma file with each update, or will the current PrimeOne file be modified and versioned? Each update will come as a new Figma file—an updated version of the previous one. You can seamlessly transition to the new version in your consumer files using Figma's Swap Library feature. Will the PrimeOne UI Kit stay in sync with ongoing updates to the Prime UI Libraries? The PrimeOne UI Kit does not update in real time alongside the libraries. However, we regularly release updates to bridge the gap and ensure alignment with key changes. How will users receive new components when they're added? New components will be included in future updates to the UI Kit. Please note that these updates may not coincide immediately with library changes and may take some time to roll out. How frequently is the PrimeOne UI Kit updated? We don't follow a fixed release schedule. Updates are made as needed, based on significant changes or additions to the Prime UI libraries.
-
-## Usage
-
-What should we do after purchasing? I can't publish the Preview file? The Preview file is view-only , so it can't be published. To use the library, download the .fig file from PrimeStore and import it into your Figma workspace. Once imported, you'll be able to open the file and publish it as a library for use in your projects. How to change theme? To enable theme switching in PrimeOne, you need to set up the Variable modes. Select the layers you want to switch between Light or Dark. Then, under Appearance, use the Apply variable modes icon to assign both the Semantic and Component modes to the target theme.
