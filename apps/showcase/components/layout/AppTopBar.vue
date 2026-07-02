@@ -1,6 +1,6 @@
 <template>
     <div :ref="containerRef" class="layout-topbar">
-        <div v-tooltip.bottom="{ value: disclaimerTooltip, class: 'max-w-[calc(100%-0.8rem)] !z-[10000]' }" class="py-1.5 px-3 text-center bg-primary-950 text-primary-50 text-sm">
+        <div v-tooltip.bottom="{ value: disclaimerTooltip, class: '!max-w-[calc(100%-0.8rem)] !z-[10000]' }" class="py-1.5 px-3 text-center bg-primary-950 text-primary-50 text-sm">
             <strong>Disclaimer:</strong> This is not the official PrimeVue page
             <sup>
                 <i class="pi pi-info-circle [--p-icon-size:0.85em]" />
