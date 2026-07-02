@@ -2,7 +2,7 @@
     <div :class="containerClass">
         <!--<AppNews />-->
         <AppTopBar :showMenuButton="false" />
-        <AppDesigner />
+        <!-- <AppDesigner /> -->
         <HeroSection />
         <FeaturesSection />
         <UsersSection />
