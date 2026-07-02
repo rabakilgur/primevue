@@ -1,5 +1,4 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Discord Chat](https://img.shields.io/discord/557940238991753223.svg?color=7289da&label=chat&logo=discord)](https://discord.gg/gzKFYnpmCY)
 [![Prime Discussions](https://img.shields.io/github/discussions-search?query=org%3Aprimefaces&logo=github&label=Prime%20Discussions&link=https%3A%2F%2Fgithub.com%2Forgs%2Fprimefaces%2Fdiscussions)](https://github.com/orgs/primefaces/discussions)
 
 [![PrimeVue Hero](https://www.primefaces.org/static/social/primevue-preview.jpg)](https://primevue.org/)
@@ -7,6 +6,12 @@
 # PrimeVue MonoRepo
 
 PrimeVue is a rich set of open source UI Components for Vue. See [PrimeVue homepage](https://primevue.org/) for live showcase and documentation.
+
+## Disclaimer
+
+**This is not the official PrimeVue page.**
+
+This is an unofficial documentation mirror, maintained for internal reference purposes. It is based on the open-source PrimeVue 4.x codebase and documentation, made available by PrimeTek Informatics under the MIT License. This site is not affiliated with, endorsed by, or sponsored by PrimeTek Informatics in any way. "PrimeVue," "PrimeFaces," "PrimeReact," "PrimeNG," and associated logos are trademarks of PrimeTek Informatics, and no rights to those trademarks are claimed or implied here. Content has been reproduced and/or adapted from the original PrimeVue documentation in accordance with the terms of the MIT License; the original copyright notice and license text are preserved accordingly. For the official, up-to-date documentation and support, please visit [primevue.org](https://primevue.org).
 
 ## Packages
 
