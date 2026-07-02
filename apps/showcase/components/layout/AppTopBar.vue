@@ -1,5 +1,11 @@
 <template>
     <div :ref="containerRef" class="layout-topbar">
+        <div v-tooltip.bottom="{ value: disclaimerTooltip, class: 'max-w-[calc(100%-0.8rem)] !z-[10000]' }" class="py-1.5 px-3 text-center bg-primary-950 text-primary-50 text-sm">
+            <strong>Disclaimer:</strong> This is not the official PrimeVue page
+            <sup>
+                <i class="pi pi-info-circle [--p-icon-size:0.85em]" />
+            </sup>
+        </div>
         <div class="layout-topbar-inner">
             <div class="layout-topbar-logo-container">
                 <PrimeVueNuxtLink to="/" class="layout-topbar-logo" aria-label="PrimeVue logo">
@@ -98,10 +104,10 @@
                     <button type="button" class="topbar-item relative group overflow-hidden !border-transparent" @click="toggleDesigner">
                         <span
                             style="animation-duration: 2s; background: conic-gradient(from 90deg, #f97316, #f59e0b, #eab308, #84cc16, #22c55e, #10b981, #14b8a6, #06b6d4, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #a855f7, #d946ef, #ec4899, #f43f5e)"
-                            class="absolute -top-5 -left-5 w-20 h-20 animate-spin"
+                            class="absolute w-20 h-20 -top-5 -left-5 animate-spin"
                         ></span>
-                        <span style="inset: 1px; border-radius: 4px" class="absolute z-2 bg-surface-0 dark:bg-surface-900 transition-all"></span>
-                        <i class="pi pi-cog z-10"></i>
+                        <span style="inset: 1px; border-radius: 4px" class="absolute transition-all z-2 bg-surface-0 dark:bg-surface-900"></span>
+                        <i class="z-10 pi pi-cog"></i>
                     </button>
                 </li>
                 <li>
@@ -115,7 +121,7 @@
                         <span class="version-icon pi pi-angle-down"></span>
                     </button>
 
-                    <div class="versions-panel hidden">
+                    <div class="hidden versions-panel">
                         <ul>
                             <li v-for="version in versions" :key="version.version" role="none">
                                 <a :href="version.url">
@@ -159,7 +165,9 @@ export default {
                     name: 'v3',
                     url: 'https://v3.primevue.org'
                 }
-            ]
+            ],
+            disclaimerTooltip:
+                'This is an unofficial documentation mirror, maintained for internal reference purposes. It is based on the open-source PrimeVue 4.x codebase and documentation, made available by PrimeTek Informatics under the MIT License. This site is not affiliated with, endorsed by, or sponsored by PrimeTek Informatics in any way. "PrimeVue," "PrimeFaces," "PrimeReact," "PrimeNG," and associated logos are trademarks of PrimeTek Informatics, and no rights to those trademarks are claimed or implied here. Content has been reproduced and/or adapted from the original PrimeVue documentation in accordance with the terms of the MIT License; the original copyright notice and license text are preserved accordingly. For the official, up-to-date documentation and support, please visit primevue.org.'
         };
     },
     scrollListener: null,
