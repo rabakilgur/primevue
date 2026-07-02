@@ -76,7 +76,6 @@
         {
             "name": "AI Tools",
             "icon": "pi pi-sparkles",
-            "badge": "NEW",
             "children": [
                 {
                     "name": "LLMs.txt",
@@ -527,8 +526,7 @@
                 },
                 {
                     "name": "Animations",
-                    "to": "/guides/animations",
-                    "badge": "NEW"
+                    "to": "/guides/animations"
                 },
                 {
                     "name": "Dynamic Imports",
@@ -573,6 +571,10 @@
                 {
                     "name": "Custom Icons",
                     "to": "/customicons"
+                },
+                {
+                    "name": "Icon List",
+                    "to": "/icons/list"
                 }
             ]
         },
@@ -630,12 +632,6 @@
             "name": "PrimeBlocks",
             "icon": "pi pi-server",
             "href": "https://primeblocks.org"
-        },
-        {
-            "name": "Store",
-            "href": "https://primeui.store",
-            "icon": "pi pi-shopping-bag",
-            "badge": "NEW"
         },
         {
             "name": "Support",
