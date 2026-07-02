@@ -20,7 +20,7 @@
             </li>
         </ul>
 
-        <div class="w-full px-4 py-6 mt-8 border rounded-lg border-surface-200 dark:border-surface-800 bg-surface-0 dark:bg-surface-900" v-if="ad">
+        <!-- <div class="w-full px-4 py-6 mt-8 border rounded-lg border-surface-200 dark:border-surface-800 bg-surface-0 dark:bg-surface-900" v-if="ad">
             <img :src="ad.lightImage" class="block w-full mb-4 rounded-xl dark:hidden" />
             <img :src="ad.darkImage" class="hidden w-full mb-4 rounded-xl dark:block" />
             <div class="flex flex-col gap-2 text-xl font-semibold text-center">
@@ -33,7 +33,7 @@
                     <RouterLink :to="ad.to" :class="slotProps.class">Learn More</RouterLink>
                 </Button>
             </span>
-        </div>
+        </div> -->
 
         <div class="w-full p-4 mt-8 border rounded-lg border-surface-200 dark:border-surface-800 bg-surface-0 dark:bg-surface-900" v-if="false">
             <img src="https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/store.images/discount/dec25/showcase/primestore-endofyear-2025-sm.jpg" class="w-full rounded-lg" alt="November Sale 2025" />
@@ -63,27 +63,27 @@ export default {
             topbarHeight: 0,
             ad: null,
             ads: [
-                {
-                    lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeblocks-menu-light.jpg',
-                    darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeblocks-menu-dark.jpg',
-                    title: 'PrimeBlocks',
-                    details: '490+ ready to use UI blocks crafted with PrimeVue and Tailwind CSS.',
-                    href: 'https://primeblocks.org'
-                },
-                {
-                    lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeone-menu-light.jpg',
-                    darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeone-menu-dark.jpg',
-                    title: 'Figma UI Kit',
-                    details: 'The official Figma UI Kit for Prime UI libraries, the essential resource for designing with PrimeOne components.',
-                    to: '/uikit'
-                },
-                {
-                    lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/templates-menu-light.jpg',
-                    darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/templates-menu-dark.jpg',
-                    title: 'Templates',
-                    details: 'Highly customizable application templates to get started in no time with style. Designed and implemented by PrimeTek.',
-                    to: '/templates'
-                },
+                // {
+                //     lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeblocks-menu-light.jpg',
+                //     darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeblocks-menu-dark.jpg',
+                //     title: 'PrimeBlocks',
+                //     details: '490+ ready to use UI blocks crafted with PrimeVue and Tailwind CSS.',
+                //     href: 'https://primeblocks.org'
+                // },
+                // {
+                //     lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeone-menu-light.jpg',
+                //     darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/primeone-menu-dark.jpg',
+                //     title: 'Figma UI Kit',
+                //     details: 'The official Figma UI Kit for Prime UI libraries, the essential resource for designing with PrimeOne components.',
+                //     to: '/uikit'
+                // },
+                // {
+                //     lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/templates-menu-light.jpg',
+                //     darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/templates-menu-dark.jpg',
+                //     title: 'Templates',
+                //     details: 'Highly customizable application templates to get started in no time with style. Designed and implemented by PrimeTek.',
+                //     to: '/templates'
+                // },
                 // {
                 //     lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/themedesigner-menu-light.jpg',
                 //     darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/themedesigner-menu-dark.jpg',
@@ -91,13 +91,13 @@ export default {
                 //     details: 'Theme Designer is the ultimate tool to customize and design your own themes featuring a visual editor, figma to theme code, cloud storage, and migration assistant.',
                 //     to: '/designer'
                 // },
-                {
-                    lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/volt-menu-light.jpg',
-                    darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/volt-menu-dark.jpg',
-                    title: 'Volt UI',
-                    details: 'Craft your own UI component library with Unstyled PrimeVue and Tailwind CSS',
-                    href: 'https://volt.primevue.org'
-                }
+                // {
+                //     lightImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/volt-menu-light.jpg',
+                //     darkImage: 'https://fqjltiegiezfetthbags.supabase.co/storage/v1/object/public/common.images/ads/volt-menu-dark.jpg',
+                //     title: 'Volt UI',
+                //     details: 'Craft your own UI component library with Unstyled PrimeVue and Tailwind CSS',
+                //     href: 'https://volt.primevue.org'
+                // }
             ]
         };
     },
