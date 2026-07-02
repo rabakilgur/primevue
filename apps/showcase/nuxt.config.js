@@ -99,17 +99,17 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 class: 'p-dark'
             },
-            title: 'PrimeVue Docs (Unofficial Mirror)',
+            title: 'PrimeVue 4 Docs (Unofficial Mirror)',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
                 { name: 'robots', content: 'noindex, nofollow' },
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: 'PrimeVue Docs (Unofficial Mirror)' },
+                { name: 'twitter:title', content: 'PrimeVue 4 Docs (Unofficial Mirror)' },
                 { name: 'twitter:description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
                 { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'PrimeVue Docs (Unofficial Mirror)' },
+                { property: 'og:title', content: 'PrimeVue 4 Docs (Unofficial Mirror)' },
                 { property: 'og:url', content: 'https://pv4.uhl.sh/' },
                 { property: 'og:description', content: 'Unofficial PrimeVue 4.x documentation mirror. For the official, up-to-date documentation visit primevue.org.' },
                 { property: 'og:image', content: 'https://www.primefaces.org/static/social/primevue-preview.jpg' },

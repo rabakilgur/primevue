@@ -1,6 +1,5 @@
 <template>
     <div :class="containerClass" :data-p-theme="$appState.theme">
-        <!--<AppNews />-->
         <AppTopBar @menubutton-click="onMenuButtonClick" />
         <Transition name="px-modal">
             <div v-if="sidebarActive" class="layout-mask" @click="onMaskClick"></div>
@@ -11,9 +10,6 @@
                 <slot></slot>
             </div>
         </div>
-        <!-- <ClientOnly fallback-tag="div" fallback="Theme Designer">
-            <AppDesigner />
-        </ClientOnly> -->
         <AppFooter />
         <Toast />
         <Toast position="top-left" group="tl" />
@@ -71,12 +67,7 @@ export default {
     },
     computed: {
         containerClass() {
-            return [
-                'layout-wrapper',
-                {
-                    'layout-news-active': this.$appState.newsActive
-                }
-            ];
+            return ['layout-wrapper'];
         }
     }
 };

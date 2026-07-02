@@ -36,8 +36,11 @@
                     <div class="col-span-12 md:col-span-6 xl:col-span-3 flex justify-center">
                         <div v-animateonscroll.once="{ enterClass: 'animate-fadein' }" class="box p-6 w-full animate-duration-500">
                             <img src="https://primefaces.org/cdn/primevue/images/landing/features/icon-support.svg" alt="components icon" class="block mb-4" />
-                            <div class="font-semibold mb-4 text-lg">Enterprise Support</div>
-                            <p class="m-0 text-surface-500 dark:text-surface-400 font-medium">Exceptional support service featuring response within 1 business day and option to request enhancements and new features for the library.</p>
+                            <div class="font-semibold mb-4 text-lg">Official Support</div>
+                            <p class="m-0 text-surface-500 dark:text-surface-400 font-medium">
+                                PRO and enterprise support is available from PrimeTek on the
+                                <a href="https://primevue.org/support" target="_blank" rel="noopener noreferrer" class="text-primary font-medium">official PrimeVue site</a>.
+                            </p>
                         </div>
                     </div>
                     <div class="col-span-12 md:col-span-6 xl:col-span-3 flex justify-center">

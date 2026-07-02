@@ -1,8 +1,6 @@
 <template>
     <div :class="containerClass">
-        <!--<AppNews />-->
         <AppTopBar :showMenuButton="false" />
-        <!-- <AppDesigner /> -->
         <HeroSection />
         <FeaturesSection />
         <UsersSection />
@@ -36,7 +34,7 @@ export default {
     },
     computed: {
         containerClass() {
-            return ['landing', { 'layout-news-active': this.$appState?.newsActive }];
+            return ['landing'];
         }
     },
     components: {

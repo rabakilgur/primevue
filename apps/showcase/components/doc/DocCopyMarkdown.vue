@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { DOCS_BASE_URL } from '@/constants/disclaimer';
+
 export default {
     name: 'DocCopyMarkdown',
     props: {
@@ -49,7 +51,7 @@ export default {
             if (typeof window !== 'undefined') {
                 return window.location.origin;
             }
-            return 'https://primevue.org';
+            return DOCS_BASE_URL;
         },
         pageName() {
             const segments = this.$route.path.split('/').filter(Boolean);
