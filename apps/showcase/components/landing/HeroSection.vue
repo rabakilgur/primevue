@@ -1,8 +1,8 @@
 <template>
-    <section class="landing-hero py-20 px-8 lg:px-20">
+    <section class="px-8 py-20 landing-hero lg:px-20">
         <div class="flex flex-col items-center">
-            <h1 class="text-5xl font-bold text-center xl:text-left leading-tight">The Next-Gen UI Suite for <span class="font-bold text-primary">Vue.js</span></h1>
-            <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56">
+            <h1 class="text-5xl font-bold leading-tight text-center xl:text-left">The Next-Gen UI Suite for <span class="font-bold text-primary">Vue.js</span></h1>
+            <p class="mt-0 mb-8 text-xl font-medium leading-relaxed text-center text-surface-500 dark:text-surface-400 lg:px-56">
                 Enhance your web applications with PrimeVue's comprehensive suite of customizable, feature-rich UI components. With PrimeVue, turning your development vision into reality has never been easier.
             </p>
             <div class="flex items-center gap-4">
@@ -10,30 +10,32 @@
                     <span>Get Started </span>
                     <i class="pi pi-arrow-right ms-4"></i>
                 </PrimeVueNuxtLink>
-                <a href="https://github.com/primefaces/primevue" target="_blank" rel="noopener noreferrer" class="linkbox">
-                    <span>Give a Star</span>
-                    <i class="pi pi-star-fill ms-4 text-yellow-500"></i>
-                </a>
+                <PrimeVueNuxtLink to="/autocomplete" class="linkbox linkbox-secondary">
+                    <span>Components</span>
+                </PrimeVueNuxtLink>
+                <PrimeVueNuxtLink to="/icons/list" class="linkbox linkbox-secondary">
+                    <span>Icon List</span>
+                </PrimeVueNuxtLink>
             </div>
         </div>
-        <div class="w-full flex lg:hidden items-center justify-center mt-16 mb-4">
+        <div class="flex items-center justify-center w-full mt-16 mb-4 lg:hidden">
             <SelectButton v-model="selectedSampleOption" :options="sampleOptions" optionLabel="title" class="dark:border dark:border-white/20">
                 <template #option="slotProps">
                     <i :class="slotProps.option.icon"></i>
-                    <div class="hidden sm:flex flex-1 text-sm font-medium leading-5">{{ slotProps.option.title }}</div>
+                    <div class="flex-1 hidden text-sm font-medium leading-5 sm:flex">{{ slotProps.option.title }}</div>
                 </template>
             </SelectButton>
         </div>
-        <div class="bg-surface-0 border border-black/10 dark:border-white/20 dark:bg-surface-950 w-full rounded-3xl p-0 flex lg:hidden items-start gap-6 overflow-hidden">
+        <div class="flex items-start w-full gap-6 p-0 overflow-hidden border bg-surface-0 border-black/10 dark:border-white/20 dark:bg-surface-950 rounded-3xl lg:hidden">
             <template v-for="sampleOption of sampleOptions" :key="sampleOption.title">
                 <img v-if="selectedSampleOption.title === sampleOption.title" :src="sampleOption.src + (isDark() ? '-dark.jpg' : '.jpg')" class="w-full" />
             </template>
         </div>
         <div class="bg-surface-0 border border-black/10 dark:border-white/20 dark:bg-surface-950 w-full h-[85vh] max-h-[1040px] rounded-3xl p-6 hidden lg:flex lg:mt-20 items-start gap-6 overflow-hidden">
-            <div :class="isSlimMenu ? 'w-auto' : 'w-72'" class="rounded-2xl p-5 bg-surface-50 dark:bg-surface-900 h-full flex flex-col justify-between">
+            <div :class="isSlimMenu ? 'w-auto' : 'w-72'" class="flex flex-col justify-between h-full p-5 rounded-2xl bg-surface-50 dark:bg-surface-900">
                 <div :class="isSlimMenu ? 'w-12 flex flex-col items-center' : 'w-auto'">
                     <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 border border-primary rounded-xl flex items-center justify-center">
+                        <div class="flex items-center justify-center border w-11 h-11 border-primary rounded-xl">
                             <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.65 11.0645L13.1283 10.7253L14.3119 12.4216V17.6803L18.3698 14.2876V8.52002L16.5099 9.19856L14.65 11.0645Z" fill="var(--p-primary-color)" />
                                 <path d="M5.18078 11.0645L6.70251 10.7253L5.51894 12.4216V17.6803L1.46098 14.2876V8.52002L3.32088 9.19856L5.18078 11.0645Z" fill="var(--p-primary-color)" />
@@ -52,15 +54,15 @@
                                 <path d="M6.02676 3.60283L2.47604 3.26356L4.84318 0.888672H7.21033L6.02676 3.60283Z" fill="var(--p-primary-color)" />
                             </svg>
                         </div>
-                        <div :class="isSlimMenu ? 'hidden' : 'block'" class="text-surface-950 dark:text-surface-0 font-medium text-3xl">Prime</div>
+                        <div :class="isSlimMenu ? 'hidden' : 'block'" class="text-3xl font-medium text-surface-950 dark:text-surface-0">Prime</div>
                     </div>
-                    <div class="mt-10 flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 mt-10">
                         <div
                             v-for="(navItem, index) in sampleAppsSidebarNavs"
                             :key="index"
                             v-tooltip="isSlimMenu ? navItem.title : null"
                             @click="setSelectedSampleAppsSidebarNav(navItem.title)"
-                            class="px-4 py-1 flex items-center gap-1 cursor-pointer text-base rounded-lg transition-all select-none"
+                            class="flex items-center gap-1 px-4 py-1 text-base transition-all rounded-lg cursor-pointer select-none"
                             :class="[
                                 {
                                     'w-12 justify-center py-4': isSlimMenu,
@@ -76,11 +78,11 @@
                     </div>
                 </div>
                 <div :class="isSlimMenu ? 'w-12 flex flex-col items-center' : 'w-auto'">
-                    <div class="mt-10 flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 mt-10">
                         <div
                             v-if="false"
                             v-tooltip="isSlimMenu ? 'Expanded Mode' : null"
-                            class="px-4 py-1 flex items-center gap-1 cursor-pointer text-base rounded-lg transition-all select-none text-muted-color hover:bg-emphasis"
+                            class="flex items-center gap-1 px-4 py-1 text-base transition-all rounded-lg cursor-pointer select-none text-muted-color hover:bg-emphasis"
                             :class="[
                                 {
                                     'w-12 justify-center py-4': isSlimMenu,
@@ -88,7 +90,7 @@
                                 }
                             ]"
                         >
-                            <a @click="toggleSlimMenu" class="cursor-pointer block p-0 m-0 leading-none">
+                            <a @click="toggleSlimMenu" class="block p-0 m-0 leading-none cursor-pointer">
                                 <i :class="isSlimMenu ? 'pi pi-window-maximize' : 'pi pi-window-minimize'"></i>
                                 <span :class="isSlimMenu ? 'hidden' : 'font-medium leading-8'">・</span>
                                 <span :class="isSlimMenu ? 'hidden' : 'font-medium leading-none'"> Slim Mode</span>
@@ -98,7 +100,7 @@
                             v-for="(navItem, index) in sampleAppsSidebarNavsMore"
                             :key="index"
                             v-tooltip="isSlimMenu ? navItem.title : null"
-                            class="px-4 py-1 flex items-center gap-1 cursor-pointer text-base rounded-lg transition-all select-none"
+                            class="flex items-center gap-1 px-4 py-1 text-base transition-all rounded-lg cursor-pointer select-none"
                             :class="[
                                 {
                                     'w-12 justify-center py-4': isSlimMenu,
@@ -151,11 +153,11 @@
                 <template #container="">
                     <div class="flex flex-col h-screen overflow-auto">
                         <div class="">
-                            <div class="flex align-items-center gap-3 p-6">
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="large" class="rounded-xl overflow-hidden" />
+                            <div class="flex gap-3 p-6 align-items-center">
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="large" class="overflow-hidden rounded-xl" />
                                 <div class="flex-1">
-                                    <div class="leading-6 text-color font-medium">Brook Simmons</div>
-                                    <div class="mt-1 leading-5 text-muted-color text-sm">Sales Executive</div>
+                                    <div class="font-medium leading-6 text-color">Brook Simmons</div>
+                                    <div class="mt-1 text-sm leading-5 text-muted-color">Sales Executive</div>
                                 </div>
                                 <Button icon="pi pi-sign-out" text rounded severity="secondary" />
                             </div>
@@ -178,62 +180,62 @@
                             />
                         </div>
                         <div v-if="selectedSidebarOption === 'Interaction Logs'" class="h-[calc(100%-172px)] flex flex-col gap-4 p-6">
-                            <div class="h-1/3 flex flex-col p-3 rounded-xl bg-emphasis">
+                            <div class="flex flex-col p-3 h-1/3 rounded-xl bg-emphasis">
                                 <div class="flex items-start justify-between">
-                                    <div class="leading-6 font-medium text-color">Call Logs</div>
+                                    <div class="font-medium leading-6 text-color">Call Logs</div>
                                     <Button icon="pi pi-download text-sm" class="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900 hover:opacity-75 transition-all" severity="secondary" text />
                                 </div>
-                                <div class="overflow-y-auto flex-1 bg-surface-0 dark:bg-surface-900 mt-2 flex flex-col rounded-lg overflow-hidden divide-y divide-surface-200 dark:divide-surface-800">
+                                <div class="flex flex-col flex-1 mt-2 overflow-hidden overflow-y-auto divide-y rounded-lg bg-surface-0 dark:bg-surface-900 divide-surface-200 dark:divide-surface-800">
                                     <div v-for="(data, index) of callLogs" :key="index" class="flex items-center gap-3 p-2">
                                         <OverlayBadge severity="success" class="w-fit">
-                                            <Avatar :image="data.image" size="small" class="rounded-md w-10 h-10 overflow-hidden flex" />
+                                            <Avatar :image="data.image" size="small" class="flex w-10 h-10 overflow-hidden rounded-md" />
                                         </OverlayBadge>
 
                                         <div class="flex-1">
-                                            <div class="text-sm leading-5 font-medium text-color">{{ data.name }}</div>
+                                            <div class="text-sm font-medium leading-5 text-color">{{ data.name }}</div>
                                             <div class="mt-1 text-sm leading-5 text-muted-color">{{ data.time }}</div>
                                         </div>
-                                        <Button icon="pi pi-phone text-sm" text class="bg-primary/10 dark:bg-primary/20 w-8 h-8" />
+                                        <Button icon="pi pi-phone text-sm" text class="w-8 h-8 bg-primary/10 dark:bg-primary/20" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/3 flex flex-col p-3 rounded-xl bg-emphasis">
+                            <div class="flex flex-col p-3 h-1/3 rounded-xl bg-emphasis">
                                 <div class="flex items-start justify-between">
-                                    <div class="leading-6 font-medium text-color">Email Records</div>
+                                    <div class="font-medium leading-6 text-color">Email Records</div>
                                     <Button icon="pi pi-download text-sm" class="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900 hover:opacity-75 transition-all" severity="secondary" text />
                                 </div>
-                                <div class="overflow-y-auto flex-1 bg-surface-0 dark:bg-surface-900 mt-2 flex flex-col rounded-lg overflow-hidden divide-y divide-surface-200 dark:divide-surface-800">
+                                <div class="flex flex-col flex-1 mt-2 overflow-hidden overflow-y-auto divide-y rounded-lg bg-surface-0 dark:bg-surface-900 divide-surface-200 dark:divide-surface-800">
                                     <div v-for="(data, index) of emailRecords" :key="index" class="flex items-center gap-3 p-2">
                                         <OverlayBadge severity="danger" class="w-fit">
-                                            <Avatar :image="data.image" size="small" class="rounded-md overflow-hidden w-10 h-10 flex" />
+                                            <Avatar :image="data.image" size="small" class="flex w-10 h-10 overflow-hidden rounded-md" />
                                         </OverlayBadge>
-                                        <div class="w-1/5 text-sm leading-5 font-medium text-color">{{ data.name }}</div>
+                                        <div class="w-1/5 text-sm font-medium leading-5 text-color">{{ data.name }}</div>
                                         <div class="flex-1">
-                                            <div class="text-sm leading-5 font-medium text-color line-clamp-2">
+                                            <div class="text-sm font-medium leading-5 text-color line-clamp-2">
                                                 {{ data.title }}
                                                 <span class="text-muted-color">
                                                     {{ data.text }}
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="w-1/6 text-sm leading-5 text-muted-color text-right">{{ data.time }}</div>
+                                        <div class="w-1/6 text-sm leading-5 text-right text-muted-color">{{ data.time }}</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="h-1/3 flex flex-col p-3 rounded-xl bg-emphasis">
+                            <div class="flex flex-col p-3 h-1/3 rounded-xl bg-emphasis">
                                 <div class="flex items-start justify-between">
-                                    <div class="leading-6 font-medium text-color">Meeting Notes</div>
+                                    <div class="font-medium leading-6 text-color">Meeting Notes</div>
                                     <Button icon="pi pi-download text-sm" class="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900 hover:opacity-75 transition-all leading-none" severity="secondary" text />
                                 </div>
-                                <div class="overflow-y-auto flex-1 bg-surface-0 dark:bg-surface-900 mt-2 p-4 flex flex-col rounded-lg overflow-hidden">
+                                <div class="flex flex-col flex-1 p-4 mt-2 overflow-hidden overflow-y-auto rounded-lg bg-surface-0 dark:bg-surface-900">
                                     <div class="flex items-start justify-between gap-1">
-                                        <div class="text-sm text-color font-medium max-w-60">Subject: Meeting Wrap-up & Action Items: Jacob Jones</div>
+                                        <div class="text-sm font-medium text-color max-w-60">Subject: Meeting Wrap-up & Action Items: Jacob Jones</div>
                                         <div class="text-sm text-muted-color">February 14, 2024 / 2:00 PM</div>
                                     </div>
-                                    <div class="text-sm text-muted-color mt-6">
+                                    <div class="mt-6 text-sm text-muted-color">
                                         Here's a quick review of our meeting with Brook Simmons and next steps. Summary:
                                         <br />
-                                        <ul class="list-disc pl-5">
+                                        <ul class="pl-5 list-disc">
                                             <li>Reviewed our SaaS solution and its features.</li>
                                             <li>Arlene McCoy intrigued by user experience potential.</li>
                                             <li>Voiced concerns on integration with current system.Action Items:</li>
@@ -248,12 +250,12 @@
                             </div>
                         </div>
                         <div v-if="selectedSidebarOption === 'Preferences'" class="h-[calc(100%-72px)] flex flex-col gap-4 p-6">
-                            <div v-for="(data, i) of preferences" :key="i" class="h-1/4 flex flex-col p-3 rounded-xl bg-emphasis">
-                                <div class="leading-6 font-medium text-color p-2">{{ data.title }}</div>
-                                <div class="overflow-y-auto flex-1 bg-surface-0 dark:bg-surface-900 mt-2 p-4 flex flex-col gap-3 rounded-lg">
+                            <div v-for="(data, i) of preferences" :key="i" class="flex flex-col p-3 h-1/4 rounded-xl bg-emphasis">
+                                <div class="p-2 font-medium leading-6 text-color">{{ data.title }}</div>
+                                <div class="flex flex-col flex-1 gap-3 p-4 mt-2 overflow-y-auto rounded-lg bg-surface-0 dark:bg-surface-900">
                                     <div v-for="(pref, j) of data.prefs" :key="j" class="flex items-center gap-2">
                                         <i class="text-lg text-color" :class="pref.icon"></i>
-                                        <div class="font-medium text-color flex-1">{{ pref.title }}</div>
+                                        <div class="flex-1 font-medium text-color">{{ pref.title }}</div>
                                         <ToggleSwitch v-model="pref.checked" />
                                     </div>
                                 </div>
@@ -267,52 +269,52 @@
                                         <Button icon="pi pi-arrow-up-right text-sm !leading-none" class="w-8 h-8 !border-surface !bg-surface-0 dark:!bg-surface-900" severity="secondary" text />
                                     </NuxtLink>
                                 </div>
-                                <img class="w-full rounded-lg mt-2 block" :src="data.image" alt="Opportunutiy Image" />
-                                <div class="flex-1 mt-2 p-2 rounded-lg bg-surface-0 dark:bg-surface-900 text-xs text-color">
+                                <img class="block w-full mt-2 rounded-lg" :src="data.image" alt="Opportunutiy Image" />
+                                <div class="flex-1 p-2 mt-2 text-xs rounded-lg bg-surface-0 dark:bg-surface-900 text-color">
                                     {{ data.text }}
                                 </div>
                             </div>
                         </div>
                         <div v-if="selectedSidebarOption === 'Statistics'" class="h-[calc(100%-160px)] p-6">
                             <div class="grid grid-cols-2 gap-4">
-                                <div class="w-full h-full flex flex-col p-3 rounded-xl bg-emphasis">
+                                <div class="flex flex-col w-full h-full p-3 rounded-xl bg-emphasis">
                                     <div class="flex items-center justify-between gap-2">
-                                        <div class="font-medium text-color p-2">Customer Satisfaction Score</div>
+                                        <div class="p-2 font-medium text-color">Customer Satisfaction Score</div>
                                     </div>
-                                    <div class="flex-1 py-4 mt-2 flex items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-900 shadow-sm">
+                                    <div class="flex items-center justify-center flex-1 py-4 mt-2 rounded-lg shadow-sm bg-surface-0 dark:bg-surface-900">
                                         <Knob v-model="customerSatisfaction" :size="150" :strokeWidth="8" valueTemplate="{value}%" class="pointer-events-none" />
                                     </div>
                                 </div>
-                                <div class="w-full h-full flex flex-col p-3 rounded-xl bg-emphasis">
+                                <div class="flex flex-col w-full h-full p-3 rounded-xl bg-emphasis">
                                     <div class="flex items-center justify-between gap-2">
-                                        <div class="font-medium text-color p-2">Estimated Lifetime Value</div>
+                                        <div class="p-2 font-medium text-color">Estimated Lifetime Value</div>
                                     </div>
-                                    <div class="flex-1 flex items-center gap-2 justify-center mt-2 p-2 rounded-lg bg-surface-0 dark:bg-surface-900 shadow-sm">
+                                    <div class="flex items-center justify-center flex-1 gap-2 p-2 mt-2 rounded-lg shadow-sm bg-surface-0 dark:bg-surface-900">
                                         <div class="font-semibold text-lg leading-none text-color border border-surface py-3.5 px-2 rounded-lg">$</div>
                                         <div class="font-semibold text-lg leading-none text-color border border-surface py-3.5 px-2 rounded-lg">272</div>
                                         <div class="font-semibold text-lg leading-none text-color border border-surface py-3.5 px-2 rounded-lg">123</div>
                                         <div class="font-semibold text-lg leading-none text-color border border-surface py-3.5 px-2 rounded-lg">000</div>
                                     </div>
                                 </div>
-                                <div class="w-full h-full flex flex-col p-3 rounded-xl bg-emphasis">
+                                <div class="flex flex-col w-full h-full p-3 rounded-xl bg-emphasis">
                                     <div class="flex items-center justify-between gap-2">
-                                        <div class="font-medium text-color p-2">Product Usage</div>
+                                        <div class="p-2 font-medium text-color">Product Usage</div>
                                     </div>
-                                    <div class="flex-1 mt-2 py-4 rounded-lg bg-surface-0 dark:bg-surface-900 shadow-sm">
-                                        <Chart type="line" :data="lineChartData" :options="lineChartOptions" class="min-h-44 w-full" />
+                                    <div class="flex-1 py-4 mt-2 rounded-lg shadow-sm bg-surface-0 dark:bg-surface-900">
+                                        <Chart type="line" :data="lineChartData" :options="lineChartOptions" class="w-full min-h-44" />
                                     </div>
                                 </div>
-                                <div class="w-full h-full flex flex-col p-3 rounded-xl bg-emphasis">
-                                    <div class="font-medium text-color p-2">Churn Risk</div>
-                                    <div class="flex-1 py-4 mt-2 flex items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-900 shadow-sm">
+                                <div class="flex flex-col w-full h-full p-3 rounded-xl bg-emphasis">
+                                    <div class="p-2 font-medium text-color">Churn Risk</div>
+                                    <div class="flex items-center justify-center flex-1 py-4 mt-2 rounded-lg shadow-sm bg-surface-0 dark:bg-surface-900">
                                         <Knob v-model="churnRisk" :size="150" :strokeWidth="8" valueTemplate="{value}%" class="pointer-events-none" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-4 w-full flex flex-col p-3 rounded-xl bg-emphasis">
-                                <div class="font-medium text-color p-2">Total Purchases</div>
-                                <div class="flex-1 py-4 px-2 w-full mt-2 flex items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-900 shadow-sm">
-                                    <Chart type="bar" :data="chartData" :options="chartOptions" class="h-60 w-full" />
+                            <div class="flex flex-col w-full p-3 mt-4 rounded-xl bg-emphasis">
+                                <div class="p-2 font-medium text-color">Total Purchases</div>
+                                <div class="flex items-center justify-center flex-1 w-full px-2 py-4 mt-2 rounded-lg shadow-sm bg-surface-0 dark:bg-surface-900">
+                                    <Chart type="bar" :data="chartData" :options="chartOptions" class="w-full h-60" />
                                 </div>
                             </div>
                         </div>
