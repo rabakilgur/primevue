@@ -1,47 +1,47 @@
 <template>
-    <section class="landing-footer pt-20 px-8 lg:px-20">
+    <section class="px-8 pt-20 landing-footer lg:px-20">
         <div class="landing-footer-container">
-            <div class="flex flex-wrap z-10">
-                <div class="w-6/12 lg:w-3/12 flex">
-                    <ul class="list-none p-0 m-0">
-                        <li class="font-bold mb-8">General</li>
+            <div class="z-10 flex flex-wrap">
+                <div class="flex w-6/12 lg:w-3/12">
+                    <ul class="p-0 m-0 list-none">
+                        <li class="mb-8 font-bold">General</li>
                         <li class="mb-6">
-                            <PrimeVueNuxtLink to="/setup" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Get Started</PrimeVueNuxtLink>
+                            <PrimeVueNuxtLink to="/setup" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary">Get Started</PrimeVueNuxtLink>
                         </li>
                         <li class="mb-6">
-                            <a href="https://github.com/primefaces/primevue-examples" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer"
+                            <a href="https://github.com/primefaces/primevue-examples" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary" target="_blank" rel="noopener noreferrer"
                                 >Examples</a
                             >
                         </li>
                     </ul>
                 </div>
-                <div class="w-6/12 lg:w-3/12 flex">
-                    <ul class="list-none p-0 m-0">
-                        <li class="font-bold mb-8">Community</li>
+                <div class="flex w-6/12 lg:w-3/12">
+                    <ul class="p-0 m-0 list-none">
+                        <li class="mb-8 font-bold">Community</li>
                         <li class="mb-6">
-                            <a href="https://github.com/orgs/primefaces/discussions" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Forum</a>
+                            <a href="https://github.com/orgs/primefaces/discussions" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary" target="_blank" rel="noopener noreferrer">Forum</a>
                         </li>
                         <li class="mb-6">
-                            <a href="https://discord.gg/gzKFYnpmCY" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Discord</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-6/12 lg:w-3/12 flex">
-                    <ul class="list-none p-0 m-0">
-                        <li class="font-bold mt-8 lg:mt-0 mb-8">Theming</li>
-                        <li class="mb-6">
-                            <PrimeVueNuxtLink to="/theming/styled" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Styled Mode</PrimeVueNuxtLink>
-                        </li>
-                        <li class="mb-6">
-                            <PrimeVueNuxtLink to="/theming/unstyled" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Unstyled Mode</PrimeVueNuxtLink>
+                            <a href="https://discord.gg/gzKFYnpmCY" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary" target="_blank" rel="noopener noreferrer">Discord</a>
                         </li>
                     </ul>
                 </div>
-                <div class="w-6/12 lg:w-3/12 flex">
-                    <ul class="list-none p-0 m-0">
-                        <li class="font-bold mt-8 lg:mt-0 mb-8">Resources</li>
+                <div class="flex w-6/12 lg:w-3/12">
+                    <ul class="p-0 m-0 list-none">
+                        <li class="mt-8 mb-8 font-bold lg:mt-0">Theming</li>
                         <li class="mb-6">
-                            <a href="https://github.com/primefaces/primevue" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <PrimeVueNuxtLink to="/theming/styled" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary">Styled Mode</PrimeVueNuxtLink>
+                        </li>
+                        <li class="mb-6">
+                            <PrimeVueNuxtLink to="/theming/unstyled" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary">Unstyled Mode</PrimeVueNuxtLink>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex w-6/12 lg:w-3/12">
+                    <ul class="p-0 m-0 list-none">
+                        <li class="mt-8 mb-8 font-bold lg:mt-0">Resources</li>
+                        <li class="mb-6">
+                            <a href="https://github.com/primefaces/primevue" class="font-medium transition-all duration-300 rounded text-surface-500 dark:text-surface-400 hover:text-primary" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </li>
                     </ul>
                 </div>
@@ -49,11 +49,9 @@
 
             <hr class="section-divider" />
 
-            <p class="text-sm text-surface-500 dark:text-surface-400 text-center mb-8">
-                <strong>Disclaimer:</strong> {{ disclaimerFull }}
-            </p>
+            <p class="mt-8 text-sm text-center text-surface-500 dark:text-surface-400"><strong>Disclaimer:</strong> {{ disclaimerFull }}</p>
 
-            <div class="flex flex-wrap justify-between py-12 gap-8">
+            <div class="flex flex-wrap justify-between gap-8 py-12">
                 <span>
                     <svg width="165" height="40" viewBox="0 0 165 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 120px">
                         <path
