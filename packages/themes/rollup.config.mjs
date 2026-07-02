@@ -170,14 +170,15 @@ function traverseDir(dir, condition, callback) {
 }
 
 function addThemes() {
+    const presetsDir = path.resolve(__dirname, process.env.INPUT_DIR + 'presets');
+
     traverseDir(
-        path.resolve(__dirname, process.env.INPUT_DIR + 'presets'),
+        presetsDir,
         (file) => file === 'index.js',
         (file, filePath, folderPath) => {
-            const searchFolder = '/' + process.env.INPUT_DIR;
-            const folderName = folderPath.substring(folderPath.indexOf(searchFolder) + searchFolder.length);
-            const input = process.env.INPUT_DIR + folderName + '/' + file;
-            const output = process.env.OUTPUT_DIR + folderName.replace('presets/', '') + '/index';
+            const relativeToPresets = path.relative(presetsDir, folderPath).split(path.sep).join('/');
+            const input = `${process.env.INPUT_DIR}presets/${relativeToPresets}/${file}`;
+            const output = `${process.env.OUTPUT_DIR}${relativeToPresets}/index`;
 
             ENTRY.format.es({ input, output });
         }

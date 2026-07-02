@@ -45,7 +45,7 @@
         "LICENSE"
     ],
     "scripts": {
-        "build": "NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
+        "build": "cross-env NODE_ENV=production INPUT_DIR=src/ OUTPUT_DIR=dist/ pnpm run build:package",
         "build:package": "pnpm run build:prebuild && tsup",
         "build:prebuild": "node ./scripts/prebuild.mjs",
         "dev:link": "pnpm link --global && npm link"
