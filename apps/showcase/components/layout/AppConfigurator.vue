@@ -112,6 +112,13 @@ export default {
             isRTL: false
         };
     },
+    mounted() {
+        const primaryColor = this.primaryColors.find((c) => c.name === this.selectedPrimaryColor);
+
+        if (primaryColor) {
+            this.applyTheme('primary', primaryColor);
+        }
+    },
     methods: {
         getPresetExt() {
             const color = this.primaryColors.find((c) => c.name === this.selectedPrimaryColor);

@@ -89,11 +89,17 @@ export default defineNuxtConfig({
     primevue: {
         usePrimeVue: process.env.DEV_ENV !== 'hot',
         autoImport: true, // When enabled, the module automatically imports PrimeVue components and directives used throughout the application.
-        importTheme: { from: '@/themes/app-theme.js' }
+        importTheme: { from: '@/themes/app-theme.js' },
+        options: {
+            ripple: true
+        }
     },
     app: {
         baseURL: baseUrl,
         head: {
+            htmlAttrs: {
+                class: 'p-dark'
+            },
             title: 'PrimeVue - Vue UI Component Library',
             meta: [
                 { charset: 'utf-8' },
